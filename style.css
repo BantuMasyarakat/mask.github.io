@@ -6,17 +6,17 @@
 .jumbotron {
     width: 100%;
     height: 350px;
-    background-color: black;
+    background-image: url('maskerbos.jpg');
+    background-position: center;
+    background-size: cover;
     position: relative;
 }
 
 .black {
     width: 100%;
     height: 100%;
-    background-image: url('Mask.jpg');
-    background-position: center;
-    background-size: cover;
     opacity: 50%;
+    background-color: black;
     position: absolute;
 }
 
