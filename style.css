@@ -1,134 +1,236 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 1100px;
+}
+
+.burgerMenu {
+    position: absolute;
+    z-index: 2;
+    height: 500px;
+    width: 100%;
+    background-color: coral;
+    transform: translateX(-10000px);
+
 }
 
 .jumbotron {
-    width: 100%;
-    height: 350px;
+    width: 411px;
+    height: 300px;
     background-image: url('maskerbos.jpg');
-    background-position: center;
+    background-position: right;
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
 }
 
-
-.jumbotron h1 {
-    color: white;
-    position: absolute;
+.burger {
     z-index: 1;
-    top: 45%;
-    right: 12%;
-    letter-spacing: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.jumbotron P {
-    color: white;
-    position: absolute;
-    z-index: 1;
-    top: 5%;
-    font-size: .6em;
-    line-height: 1em;
-    text-align: center;
-    left: 9%;
-    letter-spacing: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-.pilih {
     margin-top: 20px;
-    text-align: center;
-
-}
-
-.pilih span {
-    border-bottom: 4px solid red;
-    padding-bottom: 4px;
-}
-
-.mask1,
-.mask2,
-.mask3 {
-    display: flex;
-    width: 300px;
-    height: 80px;
-    border-radius: 50px;
-    margin-top: 50px;
-    margin-left: 40px;
-    background-color: rgb(199, 199, 199);
-    align-items: center;
-    position: relative;
-}
-
-.circle1,
-.circle2,
-.circle3 {
-    display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
+    position: fixed;
+    border-radius: 8px;
     width: 50px;
     height: 50px;
-    background-color: white;
+    cursor: pointer;
+    background-image: linear-gradient(orange, coral);
+}
+
+.line1 {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+}
+
+.line2 {
+    position: absolute;
+    top: 21px;
+    left: 10px;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+}
+
+.line3 {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+}
+
+.profile {
+    position: absolute;
+    top: 230px;
+    left: 31%;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(214, 131, 23);
     border-radius: 50%;
+    border: 7px solid white;
 }
 
-.circle1 {
-    background-image: url('image/biru.png');
-    background-position: center;
-    background-size: cover;
+main {
+    width: 100%;
+    height: 700px;
+    position: relative;
 }
 
-.circle2 {
-    background-image: url('image/hijau.png');
-    background-position: center;
-    background-size: cover;
-}
-
-.circle3 {
-    background-image: url('image/hitam.png');
-    background-position: center;
-    background-size: cover;
-}
-
-
-.hr {
-    z-index: 1;
+.mask1 {
     position: absolute;
-    top: 35px;
-    left: 70px;
-    width: 200px;
-    height: 1px;
-    background-color: rgb(31, 27, 31);
+    top: 120px;
+    left: 60px;
+    width: 120px;
+    height: 150px;
+    background-image: url('./image/biru.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
 }
 
-.namaMask1,
-.namaMask2,
-.namaMask3 {
+.mask1 h2 {
+    color: rgb(27, 0, 179);
     position: absolute;
-    top: 13px;
-    left: 73px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 110px;
+    left: 40px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.namaMask1 {
-    color: royalblue;
-}
-
-.namaMask2 {
-    color: green;
-}
-
-.namaMask3 {
-    color: black;
-}
-
-.text {
+.mask2 {
     position: absolute;
-    font-size: .7em;
-    top: 37px;
-    left: 73px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(90, 90, 90);
+    top: 120px;
+    right: 60px;
+    width: 120px;
+    height: 150px;
+    background-image: url('./image/coklat.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+}
+
+.mask2 h2 {
+    color: rgb(153, 125, 74);
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mask3 {
+    position: absolute;
+    top: 330px;
+    left: 60px;
+    width: 120px;
+    height: 150px;
+    background-image: url('./image/pink.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+}
+
+.mask3 h2 {
+    color: rgb(211, 55, 107);
+    position: absolute;
+    top: 110px;
+    left: 35px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mask4 {
+    position: absolute;
+    top: 330px;
+    right: 60px;
+    width: 120px;
+    height: 150px;
+    background-image: url('./image/hitam.jpg');
+    background-size: 400px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+}
+
+.mask4 h2 {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mask5 {
+    position: absolute;
+    top: 530px;
+    left: 60px;
+    width: 290px;
+    height: 100px;
+    background-image: url('./image/custom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+}
+
+.mask5 h2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 40px;
+    left: 95px;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.opacity {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+}
+
+.opacityCustom {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+}
+
+.bottom {
+    border-radius: 20px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 34%;
+    background-color: white;
+
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(66, 66, 66);
 }
