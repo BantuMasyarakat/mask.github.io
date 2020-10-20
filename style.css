@@ -9,15 +9,7 @@ body {
     height: 1100px;
 }
 
-.burgerMenu {
-    position: absolute;
-    z-index: 2;
-    height: 500px;
-    width: 100%;
-    background-color: coral;
-    transform: translateX(-10000px);
 
-}
 
 .jumbotron {
     width: 411px;
@@ -28,16 +20,61 @@ body {
     background-attachment: fixed;
 }
 
+.jumbotron .black {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+}
+
+.jumbotron h2 {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+}
+
 .burger {
     z-index: 1;
     margin-top: 20px;
     margin-left: 20px;
     position: fixed;
+    top: 15px;
     border-radius: 8px;
     width: 50px;
     height: 50px;
     cursor: pointer;
     background-image: linear-gradient(orange, coral);
+}
+
+div.burgermenu {
+    position: absolute;
+    top: -2000px;
+    transition: 500ms;
+    width: 411px;
+    height: 500px;
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(223, 223, 223);
+    letter-spacing: .2vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a.switch {
+    border-top: 2px solid rgb(112, 112, 112);
+    padding: 10px;
+    color: rgb(219, 219, 219);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(112, 112, 112);
+}
+
+.clear {
+    transition: 500ms;
+    transform: translateY(2000px);
 }
 
 .line1 {
@@ -73,7 +110,9 @@ body {
     left: 31%;
     width: 150px;
     height: 150px;
-    background-color: rgb(214, 131, 23);
+    background-image: url('./image/2.jpg');
+    background-position: center;
+    background-size: cover;
     border-radius: 50%;
     border: 7px solid white;
 }
