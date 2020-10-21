@@ -1,6 +1,5 @@
-const burger = document.getElementsByClassName('burger')[0];
-const burgermenu = document.getElementsByClassName('burgermenu')[0];
+const custom = document.querySelector('.mask5');
 
-burger.addEventListener('click', function () {
-    return burgermenu.classList.toggle('clear');
+custom.addEventListener('click', function () {
+    return custom.classList.toggle('mask5animate');
 })
