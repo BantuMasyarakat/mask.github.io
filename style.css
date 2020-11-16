@@ -519,7 +519,7 @@ footer .copy h5 {
 
 
 /* on portrait smartphone */
-@media only screen and (max-width: 321px) {
+@media only screen and (max-width: 720px) {
     nav {
         display: none;
     }
