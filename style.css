@@ -4,329 +4,641 @@
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    grid-template-rows: max-content;
-    grid-template-rows: 400px 1000px 100px;
-    overflow-x: hidden;
+
+div.smartphone {
+    display: none;
 }
 
 
-
-
-
-
-/* jumbotron */
-div.jumbotron {
-    position: relative;
-    background-image: url('./maskerbos.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-div.jumbotron .black {
+main {
     width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: .3;
+    height: 580px;
+    background-color: rgb(255, 255, 255);
+
 }
 
-div.jumbotron h2 {
-    position: absolute;
-    z-index: 1;
-    top: 2%;
-    left: 2%;
+nav {
+    display: grid;
+    grid-template-columns: 50% 16.6% 16.6% auto;
+    margin: 30px;
+    grid-template-areas:
+        "logo au pr sn";
+}
+
+nav img {
+    margin-left: 30px;
+    width: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    justify-self: center;
+    align-self: center;
+    color: rgb(85, 85, 85);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav .au {
+    grid-area: au;
+    border-bottom: 2px solid rgb(255, 57, 57);
+    padding: 6px 10px 6px 10px;
+}
+
+nav .pr {
+    grid-area: pr;
+    border-bottom: 2px solid rgb(255, 57, 57);
+    padding: 6px 10px 6px 10px;
+}
+
+nav .sn {
+    grid-area: sn;
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: .8em;
-    font-weight: lighter;
-    text-align: center;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    background-color: rgb(216, 47, 47);
+}
+
+main img {
+    position: absolute;
+    top: 170px;
+    right: .4%;
+    width: 700px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100% 100% 100%;
+    position: absolute;
+    overflow: hidden;
+    grid-template-areas:
+        'one two three';
+    top: 270px;
+    left: 80px;
+    width: 500px;
+    height: 200px;
+    z-index: 1;
 }
 
 
+.container .subcon1 {
+    position: relative;
+    grid-area: one;
+    margin-bottom: 30px;
+}
 
+.container .subcon2 {
+    position: relative;
+    grid-area: two;
+    margin-bottom: 30px;
+}
 
+.container .subcon3 {
+    position: relative;
+    grid-area: three;
+}
 
+.container h1 {
+    margin-bottom: 25px;
+    font-family: 'Geometr706 BlkCn BT Black';
+}
 
+.container p {
+    line-height: 1.6em;
+    font-size: 1.1em;
+    font-family: 'Bell MT';
+}
 
-/* profile */
-div.profile {
+.container h3 {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    color: rgb(255, 51, 51);
+    font-family: 'Geometr706 BlkCn BT Black';
+}
+
+.button {
+    display: flex;
     z-index: 2;
     position: absolute;
-    height: 200px;
-    width: 200px;
-    border: 5px solid rgb(255, 255, 255);
+    width: 100px;
+    height: 27px;
+    top: 480px;
+    left: 75px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bullet {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgb(255, 82, 82);
     border-radius: 50%;
-    top: 45%;
-    left: 43%;
-    background-image: url('./image/2.jpg');
-    background-position: center;
+    display: inline-block;
+}
+
+.selected {
+    width: 27px;
+    height: 27px;
+    background: rgb(255, 77, 77);
+}
+
+.bullet:hover {
+    width: 27px;
+    height: 27px;
+    background: rgb(255, 77, 77);
+}
+
+#about {
+    height: 850px;
+    position: relative;
+    background-image: url('image/background.svg');
     background-size: cover;
+}
+
+#about h2 {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(61, 61, 61);
+    padding: 6px 10px;
+    border-bottom: 2px solid rgb(255, 83, 83);
+}
+
+#about .who {
+    position: absolute;
+    top: 100px;
+    left: 15%;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    box-shadow: 10px 10px 20px rgb(139, 139, 139);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#about .who .slide-up {
+    position: absolute;
+    bottom: -600px;
+    height: 500px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: brown;
+    transition: cubic-bezier(0.23, 1, 0.320, 1) .5s;
+}
+
+#about .who:hover .slide-up {
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    transform: translateY(-440px);
+}
+
+#about .what {
+    position: absolute;
+    top: 100px;
+    right: 15%;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    box-shadow: 10px 10px 20px rgb(139, 139, 139);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+#about .what .slide-up {
+    position: absolute;
+    bottom: -600px;
+    height: 500px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: brown;
+    transition: cubic-bezier(0.23, 1, 0.320, 1) .5s;
+}
+
+#about .what:hover .slide-up {
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    transform: translateY(-440px);
 }
 
 
 
-/* main */
-main {
+
+#products {
+    height: 850px;
     position: relative;
+    background-image: url('image/background2.svg');
+    background-size: cover;
+}
+
+#products h2 {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(61, 61, 61);
+    padding: 6px 10px;
+    border-bottom: 2px solid rgb(255, 83, 83);
+}
+
+#products .container-products {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 500px;
+}
+
+#products .container-products .products1,
+.products2 {
+    width: 25%;
+    height: 100%;
+    background-color: chocolate;
+    border-radius: 20px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(87, 87, 87);
+    overflow: hidden;
+}
+
+
+footer p {
+    text-align: center;
+    line-height: 90px;
+    color: rgb(214, 214, 214);
+    font-family: monospace;
+}
+
+footer .sos {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .section {
-    display: flex;
-    width: 1400px;
-    justify-content: space-between;
-}
-
-main .mask1,
-.mask2,
-.mask3,
-.mask4 {
-    position: relative;
-    width: 300px;
-    height: 350px;
-    background-color: blue;
-    border: 2px solid rgb(156, 156, 156);
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px black;
-}
-
-.mask1 {
-    background-image: url('./image/biru.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.mask2 {
-    background-image: url('./image/coklat.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.mask3 {
-    background-image: url('./image/pink.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.mask4 {
-    background-image: url('./image/hitam.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.bottom {
-    position: relative;
-    background-color: white;
-    width: 120px;
-    height: 120px;
-    clip-path: polygon(100% 0, 0% 100%, 0 0);
-}
-
-.mask1 .bottom .color {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+footer .sos a img {
     width: 50px;
-    height: 50px;
-    background-color: rgb(9, 213, 240);
-    border-radius: 50%;
+    margin-right: 20px;
 }
 
+footer .sos a:nth-last-child(1) {
+    margin-left: 20px;
+}
 
+footer .sos .wall {
+    width: 2px;
+    height: 100px;
+    background-color: rgb(107, 107, 107);
+}
 
-.mask2 .bottom .color {
+footer .copy {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(175, 161, 116);
-    border-radius: 50%;
-}
-
-
-.mask3 .bottom .color {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(255, 0, 119);
-    border-radius: 50%;
-}
-
-
-.mask4 .bottom .color {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(58, 58, 58);
-    border-radius: 50%;
-}
-
-
-
-
-main .mask5 {
-    position: absolute;
-    top: 800px;
-    width: 600px;
-    height: 150px;
-    background-image: url('./image/custom.jpg');
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px black;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-
-
-main .mask5 h2 {
-    position: absolute;
-    top: 50%;
-    left: 44%;
-    font-size: 20px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.opacityCustom {
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: .4;
+    height: 30px;
+    background-color: rgb(70, 70, 70);
+    border-top: 2px solid rgb(255, 255, 255);
 }
 
-/* footer */
-footer {
-    background-color: rgb(41, 41, 41);
-}
-
-
-
-
-/* burger menu */
-div.burgermenu {
-    padding: 5px 10px 5px 10px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 2px solid tomato;
-    border-radius: 20px;
-    background-image: linear-gradient(rgb(255, 166, 0), tomato);
-}
-
-.burgermenu a {
-    text-decoration: none;
-    color: rgb(226, 226, 226);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: .7em;
-    font-weight: lighter;
+footer .copy h5 {
+    color: white;
+    font-weight: normal;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 30px;
 }
 
 
 
 
-/* css responsive */
-@media screen and (max-width: 1400px) {
-    body {
-        grid-template-rows: 400px 1500px 200px;
+
+
+
+
+
+
+
+
+
+
+
+/* on tablet */
+@media only screen and (max-width:1224px) {
+
+    .au,
+    .pr,
+    .sn {
+        font-size: 12px;
     }
 
-    div.profile {
-        left: 40%;
+    main {
+        height: 500px;
     }
 
-    div.section {
-        width: 800px;
-        height: 900px;
-        flex-wrap: wrap;
+    .container .subcon1,
+    .subcon2,
+    .subcon3 {
+        /* top: 240px; */
+        font-size: 13px;
     }
 
-    main .mask5 {
-        top: 1200px;
-    }
-}
-
-@media screen and (max-width: 840px) {
-    div.profile {
-        left: 38%;
+    .button {
+        top: 460px;
     }
 
-    div.section {
-        width: 700px;
-        height: 800px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    .bullet {
+        border: 2px solid rgb(255, 82, 82);
     }
 
-    main .mask1,
-    .mask2,
-    .mask3,
-    .mask4 {
-        width: 250px;
+    main img {
+        top: 200px;
+        width: 380px;
+    }
+
+    .container {
+        width: 400px;
         height: 300px;
     }
 
-    main .mask5 {
-        width: 500px;
+    #about h2 {
+        font-size: 17px;
+    }
+
+    #about .who,
+    #about .what {
+        width: 300px;
+        height: 400px;
+    }
+
+    #about .who .slide-up {
+        position: static;
+        border-radius: 0;
+    }
+
+    #about .what .slide-up {
+        position: static;
+        border-radius: 0;
+    }
+
+    #products {
+        height: 600px;
+    }
+
+    #products h2 {
+        font-size: 17px;
+    }
+
+    #products .container-products .products1,
+    .products2 {
+        width: 30%;
+        height: 80%;
     }
 }
 
-@media screen and (max-width: 500px) {
-    body {
-        grid-template-rows: 300px 900px 100px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* on landscape smartphone */
+@media only screen and (max-width: 768px) {
+    nav {
+        margin-top: 0;
     }
 
-    div.profile {
-        top: 30%;
-        left: 25%;
+
+    .au,
+    .pr,
+    .sn {
+        font-size: 12px;
     }
 
-    div.section {
-        width: 400px;
+    main {
         height: 500px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
     }
 
-    main .mask1,
-    .mask2,
-    .mask3,
-    .mask4 {
-        width: 150px;
+    .container .subcon1,
+    .subcon2,
+    .subcon3 {
+        /* top: 240px; */
+        font-size: 13px;
+    }
+
+    .button {
+        top: 440px;
+    }
+
+    .bullet {
+        border: 2px solid rgb(255, 82, 82);
+    }
+
+    main img {
+        top: 200px;
+        width: 340px;
+    }
+
+    .container {
+        top: 230px;
+        width: 300px;
+        height: 300px;
+    }
+
+    #about {
+        height: 600px;
+    }
+
+    #about h2 {
+        font-size: 17px;
+    }
+
+    #about .who,
+    #about .what {
+        width: 200px;
+        height: 300px;
+    }
+
+    #about .who .slide-up {
+        position: static;
+        border-radius: 0;
+    }
+
+    #about .what .slide-up {
+        position: static;
+        border-radius: 0;
+    }
+
+    #products {
+        height: 500px;
+    }
+
+    #products h2 {
+        font-size: 17px;
+    }
+
+    #products .container-products .products1,
+    .products2 {
+        width: 25%;
+        height: 60%;
+    }
+
+    footer {
         height: 200px;
     }
 
-    .bottom {
-        width: 80px;
-        height: 80px;
+    footer p {
+        line-height: 50px;
     }
 
-    .mask1 .bottom .color,
-    .mask2 .bottom .color,
-    .mask3 .bottom .color,
-    .mask4 .bottom .color {
+    footer .sos a img {
+        width: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* on portrait smartphone */
+@media only screen and (max-width: 321px) {
+    nav {
+        display: none;
+    }
+
+    div.smartphone {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: auto, 20px;
+    }
+
+    div.smartphone img {
+        width: 50px;
+    }
+
+
+
+
+
+    main {
+        height: 700px;
+    }
+
+    main img {
+        top: 100px;
+    }
+
+    .container {
+        width: 270px;
+        top: 330px;
+        left: 30px;
+    }
+
+
+    .container h3 {
+        right: 15px;
+    }
+
+    .button {
+        left: 35%;
+        top: 650px;
+    }
+
+    .container .subcon1 p,
+    .subcon2 p,
+    .subcon3 p {
+        text-align: left;
+        font-size: 1.3em;
+        text-indent: 20px;
+    }
+
+    #about {
+        height: 900px;
+    }
+
+    #about h2 {
+        font-size: 15px;
+        left: 35%;
+    }
+
+    #about .who {
+        left: 18%;
+    }
+
+    #about .what {
+        right: 20%;
+        top: 460px;
+    }
+
+    #products {
+        height: 800px;
+    }
+
+
+    #products h2 {
+        left: 32%;
+    }
+
+    #products .container-products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        height: 700px;
+    }
+
+    #products .container-products .products1,
+    .products2 {
+        width: 60%;
+
+    }
+
+    #products .container-products .products2 {
+        margin: 60px;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    footer p {
+        font-size: .8em;
+    }
+
+    footer .sos {
+        height: 50px;
+    }
+
+    footer .sos .wall {
+        height: 50px;
+    }
+
+    footer .sos a img {
         width: 30px;
-        height: 30px;
     }
 
-
-    main .mask5 {
-        top: 700px;
-        width: 350px;
-    }
-
-    main .mask5 h2 {
-        left: 37%;
+    footer .copy h5 {
+        font-size: .5em;
     }
 }
