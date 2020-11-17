@@ -173,7 +173,7 @@ main img {
     display: inline-block;
     width: 400px;
     height: 500px;
-    box-shadow: 10px 10px 20px rgb(139, 139, 139);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
     border-radius: 10px;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
@@ -202,7 +202,7 @@ main img {
     display: inline-block;
     width: 400px;
     height: 500px;
-    box-shadow: 10px 10px 20px rgb(139, 139, 139);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
     border-radius: 10px;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
@@ -519,7 +519,7 @@ footer .copy h5 {
 
 
 /* on portrait smartphone */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 720px) {
     nav {
         display: none;
     }
@@ -584,7 +584,7 @@ footer .copy h5 {
     }
 
     #about .what {
-        right: 20%;
+        right: 18%;
         top: 460px;
     }
 
