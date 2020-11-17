@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+div.menu {
+    display: none;
+}
+
+div.black {
+    display: none;
+}
 
 div.smartphone {
     display: none;
@@ -524,18 +531,66 @@ footer .copy h5 {
         display: none;
     }
 
+    div.menu {
+        z-index: 99;
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        background-color: rgb(255, 35, 35);
+        top: -400px;
+        transition: cubic-bezier(0.23, 1, 0.320, 1) .5s;
+    }
+
+    .appear {
+        transform: translateY(400px);
+        transition: cubic-bezier(0.23, 1, 0.320, 1) .5s;
+    }
+
+
     div.smartphone {
         margin: 10px;
         display: grid;
-        grid-template-columns: auto, 20px;
+        grid-template-columns: 50px, 20px;
+        grid-template-rows: 70px;
+        grid-template-areas:
+            'logo burger';
     }
 
     div.smartphone img {
-        width: 50px;
+        grid-area: 'logo';
+        width: 70px;
     }
 
+    div.smartphone .burger {
+        z-index: 999;
+        position: relative;
+        grid-area: 'burger';
+        justify-self: right;
+        margin: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-image: linear-gradient(to top, rgb(252, 47, 47), rgb(255, 41, 41));
+    }
 
+    div.smartphone .burger .stack {
+        position: absolute;
+        top: 18px;
+        left: 6px;
+        z-index: 1;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+    }
 
+    div.smartphone .burger .stack:nth-child(1) {
+        top: 10px;
+    }
+
+    div.smartphone .burger .stack:nth-child(3) {
+        top: 26px;
+    }
 
 
     main {
@@ -567,7 +622,7 @@ footer .copy h5 {
     .subcon3 p {
         text-align: left;
         font-size: 1.3em;
-        text-indent: 20px;
+        text-indent: 40px;
     }
 
     #about {

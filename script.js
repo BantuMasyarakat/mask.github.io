@@ -19,3 +19,14 @@ function three(){
     subcon2.style.gridArea = 'two';
     subcon3.style.gridArea = 'one';
 }
+
+
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+
+
+burger.addEventListener('click', function(){
+    menu.classList.toggle('appear');
+})
+
+console.log(window.pageYOffset);
