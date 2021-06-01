@@ -75,11 +75,11 @@ main img {
 .container {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 100% 100% 100%;
+    grid-template-columns: 100% 100%;
     position: absolute;
     overflow: hidden;
     grid-template-areas:
-        'one two three';
+        'one two';
     top: 270px;
     left: 80px;
     width: 500px;
@@ -100,10 +100,6 @@ main img {
     margin-bottom: 30px;
 }
 
-.container .subcon3 {
-    position: relative;
-    grid-area: three;
-}
 
 .container h1 {
     margin-bottom: 25px;
@@ -128,11 +124,11 @@ main img {
     display: flex;
     z-index: 2;
     position: absolute;
-    width: 100px;
+    width: 50px;
     height: 27px;
-    top: 480px;
+    top: 460px;
     left: 75px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -358,7 +354,7 @@ footer .copy h5 {
     }
 
     .button {
-        top: 460px;
+        top: 440px;
     }
 
     .bullet {
@@ -528,6 +524,18 @@ footer .copy h5 {
 /* on portrait smartphone */
 @media only screen and (max-width: 720px) {
     nav {
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 60% 0 0 40%;
+    }
+
+    nav img {
+        margin: 0;
+        width: 4rem;
+    }
+
+    nav .au,
+    nav .pr {
         display: none;
     }
 
@@ -594,11 +602,12 @@ footer .copy h5 {
 
 
     main {
-        height: 700px;
+        height: 600px;
     }
 
     main img {
-        top: 100px;
+        top: 5rem;
+        right: .8rem;
     }
 
     .container {
@@ -625,6 +634,12 @@ footer .copy h5 {
         text-indent: 40px;
     }
 
+    div.button {
+        top: 38rem;
+        left: 9rem;
+        right: 1rem;
+    }
+
     #about {
         height: 900px;
     }
@@ -635,11 +650,11 @@ footer .copy h5 {
     }
 
     #about .who {
-        left: 18%;
+        left: 4.7rem;
     }
 
     #about .what {
-        left: 18%;
+        left: 4.7rem;
         top: 460px;
     }
 
