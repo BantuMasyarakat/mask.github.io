@@ -2,20 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
-
-div.menu {
-    display: none;
-}
-
-div.black {
-    display: none;
-}
-
-div.smartphone {
-    display: none;
-}
-
 
 main {
     width: 100%;
@@ -335,17 +323,69 @@ main img {
     height: 20rem;
     background-color: white;
     border-radius: 20px;
-
+    display: grid;
+    grid-template-rows: 35% 30% 30%;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
 }
 
 #products .container-products .products1 {
     position: absolute;
     top: 10px;
     right: 15%;
-    display: inline-block;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
     border-radius: 10px;
     overflow: hidden;
+
+}
+
+a .blue {
+    display: inline-block;
+    width: 10rem;
+    height: 2rem;
+    border: 2px solid blue;
+    border-radius: 20px;
+    color: blue;
+    text-align: center;
+    font-family: cursive;
+}
+
+a .blue:hover {
+    background-color: blue;
+    color: white;
+}
+
+a .pink {
+    display: inline-block;
+    width: 10rem;
+    height: 2rem;
+    border: 2px solid rgb(255, 134, 154);
+    border-radius: 20px;
+    color: rgb(255, 134, 154);
+    text-align: center;
+    font-family: cursive;
+}
+
+a .pink:hover {
+    background-color: rgb(255, 134, 154);
+    color: white;
+}
+
+a .brown {
+    display: inline-block;
+    width: 10rem;
+    height: 2rem;
+    border: 2px solid brown;
+    border-radius: 20px;
+    color: brown;
+    text-align: center;
+    font-family: cursive;
+}
+
+a .brown:hover {
+    background-color: brown;
+    color: white;
 }
 
 #products .container-products .products1 .slide-up {
@@ -381,11 +421,12 @@ main img {
     position: absolute;
     top: 10px;
     left: 15%;
-    display: inline-block;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
     border-radius: 10px;
     overflow: hidden;
 }
+
+
 
 #products .container-products .products2 .slide-up {
     position: absolute;
@@ -694,68 +735,6 @@ footer .copy h5 {
         display: none;
     }
 
-    div.menu {
-        z-index: 99;
-        display: inline-block;
-        position: absolute;
-        width: 100%;
-        height: 400px;
-        background-color: rgb(255, 35, 35);
-        top: -400px;
-        transition: cubic-bezier(0.23, 1, 0.320, 1) .5s;
-    }
-
-    .appear {
-        transform: translateY(400px);
-        transition: cubic-bezier(0.23, 1, 0.320, 1) .5s;
-    }
-
-
-    div.smartphone {
-        margin: 10px;
-        display: grid;
-        grid-template-columns: 50px, 20px;
-        grid-template-rows: 70px;
-        grid-template-areas:
-            'logo burger';
-    }
-
-    div.smartphone img {
-        grid-area: 'logo';
-        width: 70px;
-    }
-
-    div.smartphone .burger {
-        z-index: 999;
-        position: relative;
-        grid-area: 'burger';
-        justify-self: right;
-        margin: 20px;
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        background-image: linear-gradient(to top, rgb(252, 47, 47), rgb(255, 41, 41));
-    }
-
-    div.smartphone .burger .stack {
-        position: absolute;
-        top: 18px;
-        left: 6px;
-        z-index: 1;
-        width: 30px;
-        height: 3px;
-        background-color: rgb(0, 0, 0);
-    }
-
-    div.smartphone .burger .stack:nth-child(1) {
-        top: 10px;
-    }
-
-    div.smartphone .burger .stack:nth-child(3) {
-        top: 26px;
-    }
-
-
     main {
         height: 600px;
     }
@@ -855,7 +834,6 @@ footer .copy h5 {
         position: absolute;
         top: 3px;
         right: 15%;
-        display: inline-block;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
         border-radius: 10px;
         overflow: hidden;
@@ -865,7 +843,6 @@ footer .copy h5 {
         position: absolute;
         top: 350px;
         left: 15%;
-        display: inline-block;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
         border-radius: 10px;
         overflow: hidden;
